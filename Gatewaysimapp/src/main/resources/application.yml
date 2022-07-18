@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway: 
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: CustomerMS
+          uri: lb://CustomerMS
+          predicates:
+            - Path=/customer/validatedetails
+            - Path=/customer/idproofvalidation
+            - Path=/address/add
+            - Path=/customeridentity/add
+        - id: SimMS
+          uri: lb://SimMS
+          predicates:
+            - Path=/simcard/validatesimcarddetails
+            - Path=/simcard/addnewcarddetails
+            - Path=/simcard/simcardvalidationcustomer
+            
+                
+               
+      
+      
