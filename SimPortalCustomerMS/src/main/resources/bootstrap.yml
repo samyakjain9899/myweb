@@ -1,0 +1,18 @@
+server:
+  port: 9904
+spring:
+  application:
+    name: CustomerMS
+
+  cloud: 
+    consul:
+      host: localhost
+      config: 
+      
+        fail-fast: false
+        enabled: true
+        prefix: config
+        defaultContext: application
+        data-key: data
+        profileSeperator: '::'
+        format: YAML
