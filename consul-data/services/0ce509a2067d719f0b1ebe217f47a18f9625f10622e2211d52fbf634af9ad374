@@ -1,1 +1,0 @@
-{"Token":"","Service":{"ID":"GatewayMS-9000","Service":"GatewayMS","Tags":[],"Address":"DESKTOP-QOL3DIF","Meta":{"secure":"false"},"Port":9000,"Weights":{"Passing":1,"Warning":1},"EnableTagOverride":false,"Proxy":{"Mode":"","MeshGateway":{},"Expose":{}},"Connect":{},"CreateIndex":0,"ModifyIndex":0},"Source":"remote"}
