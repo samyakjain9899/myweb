@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"CustomerMS-8000","Service":"CustomerMS","Tags":[],"Address":"localhost","Meta":{"secure":"false"},"Port":8000,"Weights":{"Passing":1,"Warning":1},"EnableTagOverride":false,"Proxy":{"Mode":"","MeshGateway":{},"Expose":{}},"Connect":{},"CreateIndex":0,"ModifyIndex":0},"Source":"remote"}
