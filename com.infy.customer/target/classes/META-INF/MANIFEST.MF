@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: ASUS
+Build-Jdk: 17.0.3
+Implementation-Title: com.infy.customer
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.infy
+Implementation-URL: https://spring.io/projects/spring-boot/com.infy.cust
+ omer
+Created-By: Maven Integration for Eclipse
+
