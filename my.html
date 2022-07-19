@@ -1,0 +1,71 @@
+<div class="BookRide">
+    <div class="Header">
+        <div class="mainheading">
+            <h1> Poolcarz</h1>
+        </div>
+        <div class="LogOut">
+            <h2>Logout</h2>
+        </div>
+    </div>
+    <div class="Matter1" [ngStyle]="!ShowRide?{top:'200px',
+        right: '350px',
+        width: '500px'}:{top:'170px',
+        right: '130px',
+        width: '1000px',
+        height: '900px'}
+       ">
+        <div class="Heading">
+            <h4>Book a Ride</h4>
+        </div>
+        <div class="Description"  [ngStyle]="!ShowRide?{}:{'margin-left':'100px','font-size':'18px'}">
+            <p>Poolcarz is an online application which enables users to share rides with offers.You can either book ride
+                or offer a ride.Did we mention that this app is advertisement free?To add on top of that its free of
+                cost! So what are you waiting for?Check out the notes available and start.</p>
+        </div>
+        <div class="Buttons" [ngStyle]="!ShowRide?{}:{'margin-left':'250px'}">
+            <div class="ShowRide" (click)="InShowRide()"><button type="button">Show Ride</button></div>
+            <div class="ToOffice" *ngIf="ShowRide" (click)="FilterToOffice()"><button type="button">To Office</button></div>
+            <div class="FromOffice" *ngIf="ShowRide" (click)="FilterFromOffice()"><button type="button">From Office</button></div>
+            <div class="OfferRide"><button type="button">Offer a Ride</button></div>
+        </div>
+        <div class="table" *ngIf="ShowRide">
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <th scope="col">Start Point</th>
+                    <th scope="col">End Point</th>
+                    <th scope="col">Seats Available</th>
+                </thead>
+                <tbody *ngFor="let details of RideDetails|filter:filtercondition" [appHighLight]="" (click)="rideDetails(details)">
+                    <td >{{details.StartPoint}}</td>
+                    <td>{{details.EndPoint}}</td>
+                    <td>{{details.Seats}}</td>
+                </tbody>
+            </table>
+        </div>
+        <div class="table1" *ngIf="ridedetail1 && ShowRide">
+            <table class="t1">
+                <thead>
+                    <th scope="col">Id</th>
+                    <th scope="col">offerid</th>
+                    <th scope="col">name</th>
+                    <th scope="col">car</th>
+                    <th scope="col">seatsleft</th>
+                    <th scope="col">pickup</th>
+                    <th scope="col">destination</th>
+                </thead>
+                <tbody>
+                    <td>{{ridedetail.id}}</td>
+                    <td>{{ridedetail.offerid}}</td>
+                    <td>{{ridedetail.name}}</td>
+                    <td>{{ridedetail.car}}</td>
+                    <td>{{ridedetail.Seats}}</td>
+                    <td>{{ridedetail.StartPoint}}</td>
+                    <td>{{ridedetail.EndPoint}}</td>
+                </tbody>
+            </table>
+            <button class="button1" type="button" (click)="booking(ridedetail)" *ngIf="!BookDisable">Book</button>
+            <button class="button2" type="button" (click)="cancel(ridedetail)" *ngIf="BookDisable">cancel ride</button>
+        </div>
+    </div>
+
+</div>
